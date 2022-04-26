@@ -43,53 +43,61 @@
         </div>
     </div>
 
+    <!--Filter and Table-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+          <div class="col-md-3">
                 <form class="bg-dark">
-                    <p>Filter Search</p>
-                    <ul class="list-group bg-dark">
-                        <li class="list-group-item bg-dark" >
-                            <label for="date">Enter Date</label>
-                            <input type="text" placeholder="1/10/2020" id="datetime" />
-                            <!-- type="text" looks for text to be input -->
-                            <!-- id="datetime" is what JS will look for when button is clicked -->
+                    <p><b><u>FILTER SEARCH</u></b></p>
+                    <ul class="bg-dark">
+
+                        <!-- CHALLENGE NEED - Filter Using New <form> Tag-->
+                        <li class="list-group" class="btn-dark">
+                                <label for="datetime">Enter Date</label>
+                                <input type="text" placeholder="1/10/2010" id="datetime" />
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="city">Enter City</label>
+                            <input type="text" placeholder="benton" id="city">
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="state">Enter State</label>
+                            <input type="text" placeholder="ar" id="state">
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="country">Enter Country</label>
+                            <input type="text" placeholder="us" id="country">
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="shape">Enter Shape</label>
+                            <input type="text" placeholder="circle" id="shape">
                         </li>
                         
-                        <li class="list-group-item bg-dark">
-                            <label for="city">Enter a City</label>
-                            <input type="text" placeholder="roswell" id="city" />
-                        </li>
-                         
-                        <li class="list-group-item bg-dark">
-                            <label for="state">Enter a State</label>
-                            <input type="text" placeholder="ca" id="state" />
-                        </li>
+                        <li class="list-group" class="btn-dark">
+                            <button id="filter-btn" type="button" class="btn-dark">
+                            Filter Table
+                            </button>
 
-                        <li class="list-group-item bg-dark">
-                            <label for="country">Enter a Country</label>
-                            <input type="text" placeholder="us" id="country" />
-                        </li>
+                            <button id="clear-btn" type="button" class="btn-dark">
+                            Clear Table
+                            </button>
 
-                        <li class="list-group-item bg-dark">
-                            <label for="shape">Enter a Shape</label>
-                            <input type="text" placeholder="circle" id="shape" />
                         </li>
-
-                        <!-- <li class="list-group-item bg-dark"> -->
-                            <!-- <button id="filter-btn" type="button" class="btn btn-dark center" >Filter Table</button> -->
-                            <!-- type="button" tells the browser that the button does nothing by default -->
-                            <!-- class="btn btn-default" adds styling to the button -->
-                            <!-- </li> -->
 
                     </ul>
                 </form>
-            </div>
-            <div class="col-md-9">
-                <table class="table table-stripped">
-                    <thead>
+          </div>
+
+
+          <!--Dynamic Table-->
+          <div class="col-md-9">
+                <table class="table table-striped">
+                <thead>
                         <tr>
-                        <!-- <tr> signifies that everything nested within it will be displayed as a row of data -->
                             <th>Date</th>
                             <th>City</th>
                             <th>State</th>
@@ -97,19 +105,18 @@
                             <th>Shape</th>
                             <th>Duration</th>
                             <th>Comments</th>
-                            <!-- <th> indicates the column name -->
                         </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
+                </thead>
+                <tbody></tbody>
                 </table>
-            </div>
+          </div>
+        
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
-    <!-- Adding the link to D3.js allows the library to react to the user input -->
-    <!-- data.js is linked next so that the data is loaded and can be accessed -->
+      
+      <!--JS Script with D3 Library-->
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+      <script src="js/data.js"></script>
+      <script src="js/app.js"></script>
 </body>
 </html>
